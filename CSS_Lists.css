@@ -1,0 +1,9 @@
+ol {
+    list-style-type: upper-roman;
+	    text-shadow: 2px 2px 3px gray;
+}
+
+ul {
+    list-style-type: square;
+	    text-shadow: 2px 2px 3px gray;
+}

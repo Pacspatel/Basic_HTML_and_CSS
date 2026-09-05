@@ -1,0 +1,6 @@
+P {
+    color:blue;
+    background-:black;
+    font-weight:bold;
+    text-align:center;
+}

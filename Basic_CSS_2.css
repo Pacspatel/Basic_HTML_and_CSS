@@ -1,0 +1,14 @@
+P {
+    color:blue;
+    background-:black;
+    font-weight:bold;
+    text-align:center;
+}
+
+p {
+    color: blue;
+    background-color: black;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+}

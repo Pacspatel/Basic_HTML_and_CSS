@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<section>
+Hello<br>
+My name is prakash.
+<p>Welcome&nbsp;&nbsp;to&nbsp;&nbsp;my&nbsp;&nbsp;website.</p>
+<span>This is my section.</span>
+</section>
+
+
+
+<section>
+Hello<br>
+My name is Rahul.<br>
+Copyright &copy; 2026
+</section>
+
+
+</body>
+</html>
