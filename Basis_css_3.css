@@ -1,0 +1,24 @@
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+/* Image hover effect */
+.my_image {
+    width: 300px;
+    transition: transform 0.5s;
+}
+
+.my_image:hover {
+    transform: scale(1.2) rotate(5deg);
+}
