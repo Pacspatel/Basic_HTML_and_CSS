@@ -1,0 +1,213 @@
+/* CUSTOM FONT */ 
+body {
+     font-family: "Roboto", sans-serif; 
+    }
+
+/*NAVBAR*/
+.nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 4; /*Sets the position of the navbar in the stack layer so it is on top*/;
+}
+
+ul{
+    list-style-type: none; /* Remove defauly bullet poing */
+    background-color: #363636; /* Set background color of the navbar */
+    margin: -10px -10px 0px -10px;  /* margin value order top, right, bottom, left */
+    overflow: hidden; /* Hide excess margin space expanding past the browser window edge and 
+    prevent a left to right scroll bar   */
+   display: flex; /* Use flexbox layout to arrange the list items horizontally */
+   align-items: center; /* Align the list items vertically in the center */
+}
+
+a{
+     display: block; 
+     /* font-family: Calibri, sans-serif;*/
+     font-family: "Roboto", sans-serif;
+     font-size: 23px;
+     font-weight: 600;
+     color: white;
+     text-decoration: none; /* Remove underline from the text */
+     text-transform: uppercase;  
+     width: 100px;
+     padding: 30px;
+     text-align: center;
+    transition: background-color 0.4s ease-in; /* Set the transition effect 
+    for the background color */
+}
+
+/*ANVBR - ROLLOVER EFFECT*/
+
+a:hover, .drop:hover /* drop : hover triggers when any one of the links in the Images 
+list tag is being hovere over  */
+{
+    background-color: rgb(242, 159, 0);    
+    color: rgb(49,49,49);  
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0,0.7 ); /* Set the shadow effect on rollover */
+    transition: background-color 0.3s ease-in ;
+}
+
+/* styles and hides the anchor links within the images link div tag */ 
+.rollover-menu{
+    display: none; /* Hide the rollover menu by default */
+    position: absolute;  /* Position the rollover menu relative to its parent */
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0,0.2); 
+}
+/*  Display anchor elements when the user hovers their mouse over the Images link */ 
+.drop:hover .rollover-menu{
+        display: block; 
+
+}
+
+/* Specifically Style the anchor elements within the div tag that contains the rollover
+ menu class selector */ 
+.rollover-menu a
+{
+    color: #363636;
+ }
+
+/* Style the anchor elements within the rollover menu when hovered over  */ 
+.rollover-menu a:hover
+{
+   color: white;
+} 
+
+/* Style the first anchor element within the rollover menu when hovered over - menu div tag  */
+.rollover-menu a:hover:nth-child(1){
+   background-color: rgb(117, 20, 20); 
+}
+
+/* Style the second anchor element within the rollover menu when hovered over - menu div tag  */
+.rollover-menu a:hover:nth-child(2){
+   background-color: rgb(87, 7, 7); 
+}   
+
+/* Style the third anchor element within the rollover menu when hovered over - menu div tag  */
+.rollover-menu a:hover:nth-child(3){
+   background-color: rgb(48, 2, 2); 
+}   
+
+/*FOOTER*/
+footer{
+    background-color: #363636;
+    margin: 30px -10px -10px -10px;  /* margin value order top, right, bottom, left */
+    overflow: hidden; /* Hide excess margin space expanding past the browser window edge and prevent a
+     left to right scroll bar   */
+    height: 70px;
+}
+
+/*Styles the text in the footer */
+.footer-text{
+    color: white;
+    font-family: Calibri, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: rgb(288, 159, 0);
+    text-align: center;
+}
+
+/*IMAGES*/
+img{
+    width: 700px;
+    height: 550px;
+    
+}
+
+
+/* create a container for each image to be held in */
+.image-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 120px; 
+}
+
+/* Create a uniform amount of space ( as the other two images on the screen ) from the navbar to the top of
+    the image when the bookmark linnk is cliekced on */ 
+#image3{
+    padding-top: 170px; }
+
+/* Image One */ 
+/* Overlay a dark grey color over the first image */
+.overlay{
+    position: absolute;
+    width: 700px;
+    height: 550px;
+    background-color: rgba(90, 90, 90);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/*Trigger the hovor effect of the overlay on image 1 with 60% opacity */ 
+.overlay:hover{
+    opacity: 0.6;
+}
+
+
+/*Image2 */
+.zoom{
+    transform: scale(1); /*set the base size of image 2 for a zoom in effect  */
+    transition: 0.5s ease-out; /* Set the transition effect for the zoom in effect */
+z-index: 3; /* Set the stack order of image 2 to be on top of other elements */
+
+}
+
+.zoom:hover{
+    transform: scale(1.5); /* Set the zoom in effect to 120% of the original size */    
+    transition: 0.5s ease-out; /* Set the transition effect for the zoom in effect */
+}
+
+/*Image3 */
+/* Create a container for the third image to be held in */
+ .circle{
+    position: relative;
+    margin: 0px;
+    overflow: hidden; 
+ }
+
+ .circle::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 50%; /* Create a circular shape for the overlay */
+    opacity: 0; /* Set the initial opacity of the overlay to be invisible */
+    top: 50%; /* Position the overlay in the center of the image */
+    left: 50%; /* Position the overlay in the center of the image */ 
+    transform: translate(-50%, -50%); /* Center the overlay on the image */
+    animation: brust-reverse 1s; /* Set the animation for the overlay to shrink back to the center of the image */ 
+}
+
+ /* Triger the hover effect on the circle class selector ;; Before */
+.circle:hover::before{
+    animation: burst 1s  ;
+    animation-fill-mode: forwards; /* Keep the final state of the animation after it completes */
+ } 
+ 
+ 
+ /*create a growing cirecle effect */
+ @keyframes burst{
+    0%{ 
+        opacity: 0.2; /* Set the initial opacity of the overlay to be visible */
+        background-color: rgba(224,224, 224); /* Set the initial background color of the overlay */
+    }
+    100%{ 
+        opacity: 0; /* Set the final opacity of the overlay to be invisible */
+        background-color: rgba(224,224, 224); /* Set the final background color of the overlay */
+        width: 300%; 
+        height: 300%;  
+    }
+ }
+/* ANimation of the circle shrinking back to the center of the image */
+ @keyframes brust-reverse{
+    0%{ 
+        opacity: 0.7 /* Set the initial opacity of the overlay to be invisible */
+        background-color: rgba(224,224, 224); /* Set the initial background color of the overlay */
+        width: 300%; 
+        height: 300%;  
+    }
+    100%{ 
+        opacity: 0.2; /* Set the final opacity of the overlay to be visible */
+        background-color: rgba(224,224, 224); /* Set the final background color of the overlay */
+    }
+ }

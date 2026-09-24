@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Creating Effects with CSS </title>
+    <meta charset="UTF-8"> 
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--NAVBAR-->
+<nav class="nav-bar">
+<ul>
+    <li>
+        <a href="#" >  Home  </a>
+    </li>
+    <li class="drop">
+        <a href="#"> Images</a>
+        <div class="rollover-menu">   
+            <a href="#image1"> Image 1 </a>
+            <a href="#image2"> Image 2 </a>
+            <a href="#image3"> Image 3 </a>
+        </div>
+    </li>
+</ul>
+
+</nav>
+<!--IMAGES-->
+<section>
+    <!--IMAGE - 1 -->
+    <div class="image-container" id="image1">
+        <img src="Images/japan-one.jpeg"> 
+        <div class="overlay"></div>
+    </div>
+    <!--IMAGE - 2 -->   
+    <div class="image-container" id="image2">
+        <img src="Images/japan-two.jpeg" class="zoom">
+ 
+    </div>
+    <!--IMAGE - 3 -->
+    <div class="image-container" id="image3">
+        <div class="circle">
+        <img src="Images/japan-three.jpeg">
+        </div>
+    </div>
+</section>
+<footer>
+     <div class="footer-text"> 
+         <p>   Prakash Test - Footer </p>
+
+     </div>
+</footer>
+</body>
+</html>
