@@ -7,21 +7,26 @@
     <link href="css/style.css" rel="stylesheet">
  </head>
 <body>
-    <!-- NAVBAR -->
-    <nav>
+    <!-- NAVBAR --> 
+    <nav class="nav-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-                 <div>
-                    <a>  1. Strawberry Cream Crepes </a>
-                    <a>  2. Chana Masala  </a>
-                    <a>  3. Maggi </a>
-                    <a>  4. Pasta </a>
-                    <a>  5. Cake </a>
-                    <a>  6. Broccoli Subji  </a>
-                    <a>  7. Biscuit Cake </a>
+            <li><a href="#">Home</a>  </li>
+            <li class="drop"><a href="#recipes">Recipes</a>   
+                 <div class="rollover-menu">
+                    <a href="#featured">  Featured Recipe  </a>
+                    <a href="#strawberry-cream-crepes">  Strawberry Cream Crepes </a>
+                    <a href="#chana-masala"> . Chana Masala  </a>
+                    <a href="#maggi">  Maggi </a>
+                    <a href="#pasta">  Pasta </a>
+                    <a href="#cake">  Cake </a>
+                    <a href="#broccoli-subji"> Broccoli Subji  </a>
+                    <a href="#biscuit-cake">  Biscuit Cake </a>
                  </div>
-            <li><a href="about.html">Contact</a></li>
+            </li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <!-- Header -->
@@ -32,14 +37,209 @@
      
      <!-- Recipe Section -->
      <section>
-        <!-- Future Recipe  -->
-         <div>
-            <h2>Future Recipe</h2>
+        <!-- Featured Recipe  -->
+         <div id="featured">
+            <h2>Featured Recipe</h2>
             <div>
                 <img src="images/8 Paneer Subji.jpeg" alt="Recipe 1">
             </div>
+            <div>
+                <h3>Paneer Subji</h3>
+                <h4> Time</h4>
+                <p> 30 minutes </p>
+                <h4> Level :  </h4>
+                <p> medium </p>
+                <p> Paneer Subji is a delicious Indian dish made with paneer (Indian cottage cheese) and a variety of spices. It is a popular vegetarian option and can be served with rice or bread. </p>
+                <input type="button" value="Receipe">
+ 
+            </div>
          </div>
+        <!-- Recipe Card -->
+         <div id="recipes">
+            <h2>Recipes </h2>
+
+             <!-- Strawberry Cream Crepes -->
+             <div id="strawberry-cream-crepes">
+                <h3>Strawberry Cream Crepes</h3>
+                <div>
+                    <img src="images/1 Strawberry Cream Crepes.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  30 minutes </p>
+                    <h4> Level :  </h4>
+                    <p>  medium </p>
+                    <p> Strawberry Cream Crepes are thin pancakes filled with a sweet strawberry cream filling. They are often served as a dessert or breakfast treat and can be topped with fresh strawberries and whipped cream. </p>
+                    <input type="button" value="Receipe">
+                </div>
+             </div> 
+
+            <!-- Chana Masala -->
+            <div id="chana-masala">
+                <h3>Chana Masala </h3> 
+                <div>   
+                    <img src="images/2 Chana Masala.jpeg"  >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  20 minutes </p>
+                    <h4> Level :  </h4>
+                    <p>  easy </p>
+                    <p> Chana Masala is a popular Indian vegetarian dish made with chickpeas and a blend of aromatic spices. It is typically served with rice or naan bread. </p>
+                    <input type="button" value="Receipe">
+                </div>
+            </div>
+            <!-- Maggi -->
+            <div id="maggi">
+                <h3>Maggi</h3>
+                <div>
+                    <img src="images/3 Maggi.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  10 minutes </p>
+                    <h4> Level :  </h4>
+                    <p>  easy </p>
+                    <p> Maggi is a popular instant noodle brand that is quick and easy to prepare. It comes in various flavors and is loved by people of all ages. </p>
+                    <input type="button" value="Receipe">
+                </div>
+            </div>
+            <!-- Pasta -->
+            <div id="pasta">
+                <h3>Pasta</h3>
+                <div>
+                    <img src="images/4 Pasta.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  25 minutes </p>
+                    <h4> Level :  </h4>
+                    <p>  easy </p>
+                    <p> Pasta is a versatile Italian dish made from wheat flour and water. It can be served with a variety of sauces, vegetables, and proteins, making it a favorite comfort food. </p>
+                    <input type="button" value="Receipe">
+                </div>
+            </div>
+            <!-- Cake -->
+            <div id="cake">
+                <h3>Cake</h3>
+                <div>
+                    <img src="images/5 Cake.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  1 hour </p>
+                    <h4> Level :  </h4>
+                    <p>  hard </p>
+                    <p> Cake is a sweet baked dessert that comes in various flavors and styles. It is often enjoyed on special occasions and can be decorated with frosting, fruits, and other toppings. </p>
+                    <input type="button" value="Receipe">
+                </div>    
+            </div>
+            <!-- Broccoli Subji -->
+            <div id="broccoli-subji">   
+                <h3>Broccoli Subji</h3>
+                <div>
+                    <img src="images/6 Broccoli Subji.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  30 minutes </p>
+                    <h4> Level :  </h4>
+                    <p>  medium </p>
+                    <p> Broccoli Subji is a healthy and flavorful Indian dish made with broccoli and a blend of spices. It can be served as a side dish or main course with rice or roti. </p>
+                    <input type="button" value="Receipe">
+                </div>
+            </div>  
+            <!-- Biscuit Cake -->
+            <div id="biscuit-cake">
+                <h3>Biscuit Cake</h3>
+                <div>
+                    <img src="images/7 Biscuit Cake.jpeg" >
+                </div>
+                <div>
+                    <h3> Prep </h3>
+                    <h4> Time </h4>
+                    <p>  1 hour </p>
+                    <h4> Level :  </h4>
+                    <p>  hard </p>
+                    <p> Biscuit Cake is a no-bake dessert made with layers of biscuits and a creamy filling. It is often chilled before serving and can be topped with chocolate or fruits. </p>
+                    <input type="button" value="Receipe">
+                </div>
+             </div> 
+             
         
+        
+        
+        </div>
      </section>    
-</body>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About</h2>
+
+    <div>
+        <p>
+            Simple Recipes is your destination for easy-to-follow recipes
+            that make cooking enjoyable for everyone, whether you are a
+            beginner or an experienced cook.
+        </p>
+
+        <p>
+            Our goal is to help you create delicious meals with simple
+            ingredients and easy steps. We offer a variety of recipes,
+            including desserts, Indian dishes, pasta, and other tasty meals.
+        </p>
+
+        <p>
+            At Simple Recipes, we believe that good food brings people
+            together. We hope our recipes make cooking simple, fun, and
+            enjoyable for everyone.
+        </p>
+    </div>
+</section>
+
+
+<!--Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <h3> want more information ? 
+            <br> Contact us below !
+        </h3>
+        <form> 
+            <input type="text" placeholder="First Name"> 
+            <input type="text" placeholder="Last Name" >
+            <br>
+            <input type="email" placeholder="Email" >
+            <input type="tel" placeholder="Phone Number" >
+            <br>    
+            <input type="checkbox" id="subscribe">
+            <label for="subscription"> Subscribe to newsletter</label>
+            <br
+            <textarea placeholder="Type your message here..."></textarea>
+         <br
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+ <!-- Footer -->
+    <footer>
+        <table>
+            <tr>
+                <td> 
+                    <p> 2024 Simple Recipes   &copy</p>
+                </td>
+
+                <td> <p> Address : xyz road,  ABC aread 1201010 </p> </td>
+                <td> <p> Portland  </p> </td>
+                <td> <p> 123-234-23455 </p> </td>
+            </tr>
+
+
+
+            
+    </body>
 </html> 
