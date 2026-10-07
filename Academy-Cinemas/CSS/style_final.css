@@ -1,0 +1,154 @@
+/* General Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    background-color: #5c3d2e;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Navigation Hover */
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #5c3d2e;
+}
+
+h3 {
+    color: #d2691e;
+}
+
+/* Home Section */
+.home {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: welcome 1.5s;
+}
+
+/* Button */
+.button {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Button Hover */
+.button:hover {
+    background-color: #5c3d2e;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background-color: white;
+    padding: 25px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+/* Project Hover */
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    background-color: #d2691e;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #5c3d2e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Simple Animation */
+@keyframes welcome {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 700px) {
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .projects {
+        display: block;
+    }
+
+    .project {
+        width: auto;
+        margin: 15px;
+    }
+} 
