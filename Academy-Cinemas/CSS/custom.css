@@ -1,307 +1,285 @@
-/* Custom Fonts */ 
+ 
+/* Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
-/* yesteryear font */
+@import url('https://fonts.googleapis.com/css2?family=Yesteryear&display=swap');
 
-
-@import url('https://fonts.googleapis.com/css2?family=Yesteryear:wght@400;700;900&display=swap');
-
-/* Create Globle css variable   */
-:root{
-     --main-color: rgb(126,133,130);
-     --main-color-accent: rgb(237, 192, 3);
-     --main-color-transparent: rgba(126,133,130,0.8);
-     --secondary-color: rgb(255, 0,0,0.9    );
-     --accent-color: rgb(36,36,36 );
-     --accent-text-color: rgb(255, 255, 255)   ;
-     --main-font-family: 'Passion One', cursive;
+/* Global CSS Variables */
+:root {
+    --main-color: rgb(126, 133, 130);
+    --main-color-accent: rgb(237, 192, 3);
+    --main-color-transparent: rgba(126, 133, 130, 0.8);
+    --secondary-color: rgba(255, 0, 0, 0.9);
+    --accent-color: rgb(36, 36, 36);
+    --accent-text-color: rgb(255, 255, 255);
+    --main-font-family: 'Passion One', cursive;
     --secondary-font-family: 'Yesteryear', cursive;
-   
 }
 
-
-html{
-    scrool-padding-top: 100px;
+/* General Page Styling */
+html {
+    scroll-padding-top: 110px;
+    scroll-behavior: smooth;
 }
 
-body{
-background-image: url(../images/theater-curtains.jpg);
-background-size: 100% 120%;
-background-attachment: fixed;
-overflow-x: hidden;
+body {
+    background-image: url('../images/theater-curtains.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
-
-/*Navbar*/
-.navbar { 
-    
+/* Navigation Bar */
+.navbar {
     background-color: var(--secondary-color);
-    border-bottom: 5px solid rgb(98,0,0 );
-    height: 100px;
-     
+    border-bottom: 5px solid rgb(98, 0, 0);
+    min-height: 90px;
 }
 
-/*Navbar Brand*/
-.navbar-brand
-{
+.navbar-brand {
     color: var(--main-color-accent);
     font-family: var(--main-font-family);
-    font-size: 45px;
-    padding-left: 30px;
+    font-size: 38px;
+    padding-left: 15px;
 }
 
-
-.nav-link
-{
+.nav-link {
     color: var(--main-color-accent);
-    font-family:var(--main-font-family);
-    font-size: 35px;   
+    font-family: var(--main-font-family);
+    font-size: 27px;
 }
 
-.nav-link:hover
-{
-    color: var(--main-color-transparent);
-    text-shadow: 0 0 3px rgba(255,123,0,0.6);
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-text-color);
+    text-shadow: 0 0 3px rgba(255, 123, 0, 0.6);
 }
 
-.nav-link:focus
-{
-    color: var(--accent-text-color      );
-    text-shadow: 0 0 3px rgba(255,123,0,0.6);
-}
-
-
-.navbar-expand-lg .navbar-nav .nav-link 
-{
-    padding-left: 1.5rem;
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.2rem;
 }
 
 .dropdown-menu {
     border: none;
-    border-radius: 0px;
-    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.4);
+    border-radius: 0;
+    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.4);
     background-color: var(--main-color);
-    padding: 0px; 
-}   
+    padding: 0;
+}
 
 .dropdown-item {
     color: var(--accent-color);
     font-family: var(--main-font-family);
-    text-align: center;
-    font-size: 30px;
-    padding-top: 15px ;
-    padding-bottom: 20px ;
-    border-bottom: 2px solid rgb(117,77,13);
+    font-size: 22px;
+    padding: 12px 18px;
+    border-bottom: 2px solid rgb(117, 77, 13);
 }
 
-
-.dropdown-item:hover , dropdown-item:focus
-{
-    
+.dropdown-item:hover,
+.dropdown-item:focus {
     color: var(--accent-text-color);
-    background-color: var(--main-color);   
+    background-color: var(--main-color);
 }
 
-/*mobile menu */
+/* Mobile Navigation Button */
 .navbar-toggler {
-    border: none;
-    transition: 0.5s ease;
- 
+    border: 1px solid var(--main-color-accent);
 }
 
 .navbar-toggler:focus {
-     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width)  rgb(98 ,0,0);
-     transition: 0.5s ease;
-
+    box-shadow: 0 0 0 3px rgba(237, 192, 3, 0.5);
 }
 
-n.avbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28237, 192, 3%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28237,192,3,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-
-/*Header Image */ 
-
-#header-image{
-     padding-top : 150px; 
-} 
-
-
-h1, h3, h4, h5 ,p{
-     cursor: default;
+/* Cinema Logo */
+#home {
+    padding: 90px 15px 30px;
 }
 
+.cinema-logo {
+    max-width: 650px;
+    width: 100%;
+}
 
-h1{
-    
-    
+/* Headings */
+h1,
+h3,
+h4,
+h5,
+p {
+    cursor: default;
+}
+
+h1 {
     font-family: var(--main-font-family);
     color: var(--main-color-accent);
-    text-shadow: 0 0 10px rgba(0,0,0);
+    text-shadow: 0 0 10px #000;
     text-align: center;
-    font-size: 100px;
+    font-size: 75px;
+    margin-bottom: 35px;
 }
 
-h3{
+h3 {
     font-family: var(--main-font-family);
-    font-size: 25px;
+    font-size: 30px;
 }
 
-h4{
-font-family:var(--secondary-font-family);
+h4 {
+    font-family: var(--secondary-font-family);
+    font-size: 28px;
 }
 
-h5{
-    font-family:var(--main-font-family);
-    font-size: 20px;    
+h5 {
+    font-family: var(--main-font-family);
+    font-size: 23px;
 }
 
-
-b{
-    font-weight: 600;   
-}
-
-img{
+img {
     border-radius: 5px;
 }
 
-/*Movie Cards */
-.container
-{
-    padding: 100px;
-}
-
-.card{
-   border:5px solid var(--main-color );
-   border-radius: 5px;
-    background-color: rgba(255,255,255,0.9 );
-
-}
-
-.card-body{
-    padding-top: 30px;
-    padding-left: 20px;
-}
-
-.spacer{
+/* Main Content */
+.container {
     padding-top: 50px;
- 
+    padding-bottom: 50px;
 }
-/*Buttons */
 
-.btn{   
+.movie-row {
+    margin-bottom: 60px;
+    scroll-margin-top: 110px;
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    border: 5px solid var(--main-color);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.lead {
+    font-size: 1.05rem;
+}
+
+.spacer {
+    padding-top: 50px;
+}
+
+/* Show Time Buttons */
+.show-times {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.btn {
     background-color: var(--main-color);
     border-radius: 20px;
     margin-top: 5px;
-    margin-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px 16px;
     color: var(--accent-color);
     font-family: var(--main-font-family);
     font-size: 18px;
-    
 }
 
-.btn:focus{
-     border-color:transparent;
-     background-color: var(--main-color );
-     color: var(--accent-text-color);
-
-}
-.btn:hover{
-    
-     border-color:transparent;
-    background-color: var(--main-color-accent);
+.btn:focus {
+    border-color: transparent;
+    background-color: var(--main-color);
     color: var(--accent-text-color);
 }
 
-.yellow-btn{
+.btn:hover {
+    border-color: transparent;
     background-color: var(--main-color-accent);
-    padding:20px;
-    border-radius:40px;
-    font-size:25px;
-    color:var(--accent-color);
-    width:150px;
-    margin-top:20px;
-    margin-bottom: 40px;;
+    color: var(--accent-color);
 }
 
-.yellow-btn:hover, .yellow-btn:focus{
-    background-color: var(--main-color-accent);
-    color: var(--accent-text-color);
-
+/* Ticket Section */
+.ticket-card {
+    height: 100%;
+    min-height: 200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.96);
 }
 
-/*ticekts cards */
-    #tickets .card
-    {
-       padding: 40px;
-       height: 250px;
-       margin-right: 20px;
-       background-color: white
-    }
-
-
-    .form-select{
-        font-family: var(--main-font-family);
-        font-size: 20px;
-        border:3px solid var(--main-color);
-        transition: border-color 0.5s ease-in;
-    }
-
-    .form-select:focus{
-        border-color: var(--secondary-color);
-        box-shadow:none;
-        transition:  0.5s ease-in;
-    }
-
-    input[type="number"]{
-        width: 70px;
-        padding: 5px;
-        border: 3px solid var(--main-color);
-        border-radius: 5px;
-        font-family: var(--main-font-family);
-        font-size: 20px;
-        transition: border-color 0.5s ease-in;
-     }
-
-     input[type="number"]:focus{
-        border: 3px solid var(--secondary-color);
-        transition:  0.5s ease-in;
-        outline: 0;
-     }
-
-.from-control
-{
-
+.form-select,
+.form-control {
+    font-family: var(--main-font-family);
+    font-size: 18px;
     border: 3px solid var(--main-color);
 }
 
-.from-control:focus{
-
-    color:#212529
-    border-color: var(var(--secondary-color);
-    box-shadow: 0 0 0px .25rem var(---main-color);
-
+.form-select:focus,
+.form-control:focus {
+    border-color: var(--main-color-accent);
+    box-shadow: 0 0 0 0.2rem rgba(237, 192, 3, 0.2);
 }
 
-
-#contact-submit{
-    float:right;
+.ticket-quantity {
+    max-width: 120px;
+    margin: 10px auto;
 }
 
-
-footer{
-    border-top:5px solid var(--main--color);
-    background-color: rgbc(0,0,0,,0.6);
-    margin:0px -15px 0px -15px;
-
+.yellow-btn {
+    background-color: var(--main-color-accent);
+    padding: 15px 20px;
+    border-radius: 40px;
+    font-size: 23px;
+    color: var(--accent-color);
+    min-width: 150px;
+    margin-top: 25px;
+    margin-bottom: 35px;
 }
 
-.form-select:focus{
-    font-family :vat(--main-font-family)
-    color: var(--accent-text-color)
-    font-size:30px;
+.yellow-btn:hover,
+.yellow-btn:focus {
+    background-color: var(--main-color);
+    color: var(--accent-text-color);
 }
-.footer-image{
-    width=100px'
-    
+
+/* Contact Form */
+#contact-submit {
+    min-width: 130px;
 }
+
+/* Footer */
+.site-footer {
+    padding: 35px 20px;
+    border-top: 5px solid var(--main-color-accent);
+    background-color: rgba(36, 36, 36, 0.95);
+    color: var(--accent-text-color);
+}
+
+.site-footer h5 {
+    color: var(--main-color-accent);
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+}
+
+.footer-link {
+    display: inline-block;
+    color: var(--main-color-accent);
+    text-decoration: none;
+    margin: 3px 8px;
+}
+
+.footer-link:hover {
+    color: var(--accent-text-color);
+    text-decoration: underline;
+}
+ 

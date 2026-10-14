@@ -1,0 +1,53 @@
+
+html {
+    font-family: "Avenir Next", Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    max-width: 500px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+input {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 75%;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid gray;
+}
+
+input:focus {
+    outline: none;
+}
+
+li {
+    text-align: left;
+    font-size: 24px;
+    list-style: none;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.remove {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 14px;
+    color: gray;
+}

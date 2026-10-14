@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My React and Web Design Projects</title>
+
+    <!-- React libraries for the original JSX assignment -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"
+        crossorigin></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+        crossorigin></script>
+
+    <!-- Babel allows the browser to understand JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        /* General webpage styling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Previous Fade Challenge */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation Challenge: move and change the color of the box */
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+                background-color: royalblue;
+            }
+
+            50% {
+                transform: translateX(100px);
+                background-color: orange;
+            }
+
+            100% {
+                transform: translateX(0);
+                background-color: royalblue;
+            }
+        }
+
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            border-radius: 10px;
+            animation: moveBox 3s infinite;
+        }
+
+        /* Style the navigation menu */
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: orange;
+        }
+
+        /* Style each main section */
+        section {
+            padding: 35px 20px;
+            max-width: 1000px;
+            margin: auto;
+            scroll-margin-top: 20px;
+        }
+
+        h1,
+        h2 {
+            color: darkblue;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Style the React and form sections */
+        form {
+            max-width: 450px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: darkblue;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: royalblue;
+        }
+
+        /* Animation Challenge section */
+        .animation-area {
+            min-height: 130px;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        /* Zoom In and Out Challenge */
+        .zoom-image {
+            width: 100%;
+            max-width: 500px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+            animation: zoomEffect 4s infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            from {
+                transform: scale(0.8);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Automatic Slideshow Challenge */
+        .slideshow {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .slide-caption {
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        /* Original popup form styling */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .popup-content {
+            position: relative;
+            background-color: white;
+            width: 90%;
+            max-width: 450px;
+            margin: 6% auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .popup-content h2 {
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            color: red;
+        }
+
+        .close-form-button {
+            background-color: #666;
+        }
+
+        /* Sticky Challenge: fixed contact button */
+        .sticky-contact {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 900;
+            background-color: #087f5b;
+            color: white;
+            border-radius: 25px;
+            padding: 14px 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+        }
+
+        .sticky-contact:hover {
+            background-color: #065f46;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Make the page easier to use on mobile devices */
+        @media screen and (max-width: 600px) {
+            nav a {
+                margin: 5px;
+            }
+
+            .zoom-image,
+            .slideshow img {
+                height: 220px;
+            }
+
+            .popup-content {
+                margin: 15% auto;
+            }
+
+            .sticky-contact {
+                right: 12px;
+                bottom: 12px;
+            }
+        }
+
+        /* Respect the visitor's reduced-motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            body {
+                animation: none;
+            }
+
+            .animated-box,
+            .zoom-image {
+                animation: none;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bookmark Challenge: navigation links to page sections -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#react">React JSX</a>
+        <a href="#form">Contact Form</a>
+        <a href="#animation">Animation</a>
+        <a href="#zoom">Zoom Image</a>
+        <a href="#slideshow">Slideshow</a>
+    </nav>
+
+    <!-- Home section -->
+    <section id="home" class="center">
+        <h1>My Web Development Projects</h1>
+
+        <p>
+            Welcome to my webpage! This page combines my React,
+            HTML, CSS, JavaScript, and animation assignments.
+        </p>
+    </section>
+
+    <!-- Original React JSX Assignment -->
+    <section id="react" class="center">
+        <h2>React JSX Assignment</h2>
+
+        <p>This greeting is displayed using React and JSX.</p>
+
+        <!-- React displays the greeting inside this div -->
+        <div id="JSX"></div>
+
+        <script type="text/babel">
+            // Create a Greeting component
+            class Greeting extends React.Component {
+                render() {
+                    return <h2>Hello, World!</h2>;
+                }
+            }
+
+            // Display the Greeting component
+            ReactDOM.render(
+                <Greeting />,
+                document.getElementById('JSX')
+            );
+        </script>
+    </section>
+
+    <!-- Original Form Challenge with JavaScript validation -->
+    <section id="form" class="center">
+        <h2>Contact Form Challenge</h2>
+
+        <p>Complete all fields before submitting the form.</p>
+
+        <form id="contactForm" onsubmit="return validateForm()">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        // Validate the original contact form
+        function validateForm() {
+            var name_1 = document.getElementById("name").value.trim();
+            var email_1 = document.getElementById("email").value.trim();
+            var phone_1 = document.getElementById("phone").value.trim();
+            var message_1 = document.getElementById("message").value.trim();
+
+            // Show an alert if any field is empty
+            if (
+                name_1 === "" ||
+                email_1 === "" ||
+                phone_1 === "" ||
+                message_1 === ""
+            ) {
+                alert("Please fill in all fields before submitting.");
+                return false;
+            }
+
+            alert("Thank you! All fields have been completed.");
+
+            // This demonstration form does not send information
+            return false;
+        }
+    </script>
+
+    <!-- Animation Challenge: use CSS keyframes -->
+    <section id="animation">
+        <h2>Animation Challenge</h2>
+
+        <p>
+            This box moves from side to side and changes color
+            using the CSS @keyframes rule.
+        </p>
+
+        <div class="animation-area">
+            <div class="animated-box"></div>
+        </div>
+    </section>
+
+    <!-- Zoom In and Out Challenge -->
+    <section id="zoom" class="center">
+        <h2>Zoom In and Out Challenge</h2>
+
+        <p>
+            This image slowly zooms in and out using CSS animation.
+        </p>
+
+        <!-- Replace this image URL with one of your own images if desired -->
+        <img
+            class="zoom-image"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+            alt="Beautiful landscape with mountains and nature">
+    </section>
+
+    <!-- Automatic Slideshow Challenge -->
+    <section id="slideshow" class="center">
+        <h2>Automatic Slideshow Challenge</h2>
+
+        <p>The picture changes automatically every three seconds.</p>
+
+        <div class="slideshow">
+            <img
+                id="slideImage"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+                alt="Beautiful nature landscape">
+
+            <div id="slideCaption" class="slide-caption">
+                Beautiful Nature
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Contact Form Challenge -->
+    <section class="center">
+        <h2>Popup Contact Form Challenge</h2>
+
+        <p>Click the button to open a popup contact form.</p>
+
+        <button type="button" onclick="openForm()">
+            Open Contact Form
+        </button>
+    </section>
+
+    <!-- Sticky Challenge: button stays at bottom right -->
+    <button
+        type="button"
+        class="sticky-contact"
+        onclick="openForm()">
+        Contact Us
+    </button>
+
+    <!-- Popup contact form shared by both buttons -->
+    <div id="popupForm" class="popup">
+
+        <div class="popup-content">
+
+            <!-- X closes the popup -->
+            <span
+                class="close-button"
+                onclick="closeForm()"
+                role="button"
+                tabindex="0"
+                aria-label="Close contact form">&times;</span>
+
+            <h2>Contact Us</h2>
+
+            <form id="popupContactForm"
+                onsubmit="return submitPopupForm()">
+
+                <label for="popupName">Name:</label>
+                <input type="text" id="popupName" required>
+
+                <label for="popupEmail">Email:</label>
+                <input type="email" id="popupEmail" required>
+
+                <label for="popupPhone">Phone Number:</label>
+                <input type="tel" id="popupPhone" required>
+
+                <label for="popupMessage">Message:</label>
+                <textarea id="popupMessage" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+
+                <button
+                    type="button"
+                    class="close-form-button"
+                    onclick="closeForm()">
+                    Close
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Open the popup contact form
+        function openForm() {
+            document.getElementById("popupForm").style.display = "block";
+            document.getElementById("popupName").focus();
+        }
+
+        // Close the popup contact form
+        function closeForm() {
+            document.getElementById("popupForm").style.display = "none";
+        }
+
+        // Validate the popup form
+        function submitPopupForm() {
+            var popupName_1 =
+                document.getElementById("popupName").value.trim();
+
+            var popupEmail_1 =
+                document.getElementById("popupEmail").value.trim();
+
+            var popupPhone_1 =
+                document.getElementById("popupPhone").value.trim();
+
+            var popupMessage_1 =
+                document.getElementById("popupMessage").value.trim();
+
+            // Check that no field is empty
+            if (
+                popupName_1 === "" ||
+                popupEmail_1 === "" ||
+                popupPhone_1 === "" ||
+                popupMessage_1 === ""
+            ) {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            alert("Thank you for contacting us!");
+
+            // Close the popup after submission
+            closeForm();
+
+            // Do not send information to a server
+            return false;
+        }
+
+        // Close the popup when the user clicks outside the form
+        window.addEventListener("click", function(event) {
+            var popup_1 = document.getElementById("popupForm");
+
+            if (event.target === popup_1) {
+                closeForm();
+            }
+        });
+
+        // Allow the X button to close the popup with the keyboard
+        document.querySelector(".close-button").addEventListener(
+            "keydown",
+            function(event) {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    closeForm();
+                }
+            }
+        );
+
+        // Automatic Slideshow Challenge
+        var slideNumber = 0;
+
+        // Store the slideshow images and captions
+        var slides = [
+            {
+                image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80",
+                caption: "Beautiful Nature",
+                alt: "Beautiful nature landscape"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80",
+                caption: "Mountain Lake",
+                alt: "Mountain lake and green landscape"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80",
+                caption: "Forest Adventure",
+                alt: "Sunlight shining through a forest"
+            }
+        ];
+
+        // Change to the next slideshow image
+        function changeSlide() {
+            slideNumber = (slideNumber + 1) % slides.length;
+
+            document.getElementById("slideImage").src =
+                slides[slideNumber].image;
+
+            document.getElementById("slideImage").alt =
+                slides[slideNumber].alt;
+
+            document.getElementById("slideCaption").textContent =
+                slides[slideNumber].caption;
+        }
+
+        // Change the image every three seconds
+        setInterval(changeSlide, 3000);
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>My Web Development Projects</p>
+        <p>Created by Prakash Patel</p>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+
+</html>

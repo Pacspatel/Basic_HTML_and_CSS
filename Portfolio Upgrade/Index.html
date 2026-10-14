@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prakash Patel's Portfolio</title>
+
+    <link rel="shortcut icon" type="image/png" href="images/coding_icon.png">
+    <link rel="stylesheet" type="text/css" href="stylesheet/sample_portfolio.css">
+
+    <script src="JS/sample_portfolio.js" defer></script>
+</head>
+
+<body class="Background">
+
+    <!-- Navigation bar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact" onclick="openForm()">Contact</a>
+    </div>
+
+    <!-- Home section and background video -->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+
+    <!-- Text displayed over the background video -->
+    <div class="Video_Text">
+        <h1 class="white-text">Prakash Patel's Portfolio</h1>
+
+        <p class="center">
+            <strong>
+                Welcome to my portfolio website!
+
+                <br><br>
+
+                I am learning HTML, CSS, Bootstrap, and JavaScript.
+                I enjoy learning new skills and building websites.
+
+                <br><br>
+
+                I am also interested in technology, food, and trying new recipes.
+
+                <br><br>
+
+                Thank you for visiting my website!
+            </strong>
+        </p>
+    </div>
+
+    <!-- Slideshow section -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <h1>My Learning Journey</h1>
+
+            <div id="Slideshow_Container">
+
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/my learning.jpeg"
+                         alt="Personal photo">
+                    <div class="text">
+                        Hello! My name is Prakash Patel.
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/HTML_CSS_and_JavaScript.jpeg"
+                         alt="HTML, CSS, and JavaScript">
+                    <div class="text">
+                        I am learning HTML, CSS, and JavaScript.
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/Python.png"
+                         alt="Python programming language">
+                    <div class="text">
+                        I am interested in learning programming.
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/C_Sharp_and_Dot_NET.png"
+                         alt="C Sharp and .NET">
+                    <div class="text">
+                        I enjoy exploring new technology.
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/SQL_and_Database.jpg"
+                         alt="SQL and databases">
+                    <div class="text">
+                        I am learning about databases and SQL.
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images"
+                         src="images/My image-1.jpeg"
+                         alt="Food and personal interests">
+                    <div class="text">
+                        I also enjoy food and trying new recipes.
+                    </div>
+                </div>
+
+                <!-- Previous and next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)"
+                   aria-label="Previous slide">&#10094;</a>
+
+                <a class="Next" onclick="plusSlides(1)"
+                   aria-label="Next slide">&#10095;</a>
+            </div>
+
+            <br>
+
+            <!-- Slideshow navigation dots -->
+            <div class="Dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div class="Row" id="About">
+
+        <!-- Left column -->
+        <div class="Column_2">
+            <img src="images/myimage -2.jpeg"
+                 alt="Food and personal interests">
+        </div>
+
+        <!-- Right column -->
+        <div class="Column_1">
+            <h1>About Me</h1>
+
+            <p>
+                My name is Prakash Patel. I am learning web development
+                and improving my computer skills.
+
+                <br><br>
+
+                During my coursework, I have worked with HTML, CSS,
+                Bootstrap, JavaScript, and GitHub. I enjoy practising
+                what I learn and building my own web pages.
+
+                <br><br>
+
+                Outside of learning technology, I enjoy spending time
+                with my family, travelling, and exploring food and recipes.
+
+                <br><br>
+
+                My goal is to keep learning and improve my skills one
+                project at a time.
+            </p>
+        </div>
+    </div>
+
+    <!-- GitHub section -->
+    <div class="Row" id="GitHub">
+
+        <!-- Left column -->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+
+            <p>
+                I use GitHub to store and share my coding projects.
+                You can visit my repository using the link below.
+            </p>
+
+            <p class="center">
+                <a href="https://github.com/Pacspatel/Basic_HTML_and_CSS"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    My HTML and CSS Projects
+                </a>
+            </p>
+        </div>
+
+        <!-- Right column -->
+        <div class="Column_2">
+            <a href="https://github.com/Pacspatel/Basic_HTML_and_CSS"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="images/GitHub.png" alt="GitHub logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">
+            CONTACT ME
+        </button>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" onsubmit="submitForm(event)">
+
+                <h1>Contact Me</h1>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message"><b>Message</b></label>
+                <textarea id="message" name="message"
+                          placeholder="Write your message"
+                          rows="4" required></textarea>
+
+                <button type="submit" class="btn">SUBMIT</button>
+
+                <button type="button" class="btn cancel"
+                        onclick="closeForm()">CLOSE</button>
+
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="center">
+            &copy; 2026 Prakash Patel |
+            <a href="https://github.com/Pacspatel/Basic_HTML_and_CSS"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>
